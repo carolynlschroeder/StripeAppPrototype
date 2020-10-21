@@ -1,0 +1,49 @@
+﻿@model StripeAppPrototype.Models.PaymentMethodModel;
+@{
+    ViewData["Title"] = "Add Paymen tMethod";
+}
+
+<h1>AddPaymentMethod</h1>
+
+<div class="payment">
+    <form action="/Customer/AddPaymentMethod" method="post" id="payment-form">
+        <input type="hidden" asp-for="StripePublishableKey"/>
+        <div class="group">
+            <label>
+                <span>Email</span>
+                <input asp-for="Email" class="field" />
+                <span asp-validation-for="Email"></span>  
+            </label>
+            <label>
+                <span>Card number</span>
+                <div id="card-number-element" class="field"></div>
+            </label>
+            <label>
+                <span>Expiry date</span>
+                <div id="card-expiry-element" class="field"></div>
+            </label>
+            <label>
+                <span>CVC</span>
+                <div id="card-cvc-element" class="field"></div>
+            </label>
+            <label>
+                <span>Postal code</span>
+                <input id="postal-code" name="postal_code" class="field" />
+            </label>
+            <label>
+                <span>Description</span>
+                <input asp-for="Description" class="field" />
+                <span asp-validation-for="Description"></span>  
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Donate</button>
+        <div class="outcome">
+            <div class="error"></div>
+        </div>
+    </form>
+</div>
+<div style="height:50px"></div>
+@section scripts{
+    <script type="text/javascript" src="https://js.stripe.com/v3/"></script>
+    <script src="~/js/payment.js"></script>
+}

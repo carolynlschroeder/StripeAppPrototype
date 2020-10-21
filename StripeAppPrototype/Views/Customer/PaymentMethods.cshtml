@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "Payment Methods";
+}
+
+<h1>Payment Methods</h1>
+<a asp-controller="Customer" asp-action="AddPaymentMethod">Add Payment Method</a>
+<div class="form-group row">
+    <div class="col-md-2 col-form-label">Email</div>
+    <div class="col-md-4"><input id="email" class="form-control" /></div>
+    <div class="col-md-2"><button id="btnGo" class="btn btn-primary">Go</button></div>
+</div>
+<div id="paymentMethods"></div>
+
+@section scripts{
+
+    <script src="~/js/paymentMethod.js"></script>
+}

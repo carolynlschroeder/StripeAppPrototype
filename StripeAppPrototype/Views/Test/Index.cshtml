@@ -1,0 +1,11 @@
+﻿@model StripeAppPrototype.Models.TestModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<form asp-controller="Test" asp-action="Index">
+    <input type="hidden" asp-for="Name"/>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
