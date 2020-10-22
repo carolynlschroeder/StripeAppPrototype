@@ -54,7 +54,7 @@ namespace StripeAppPrototype.Controllers
             //price.Id = response.id;
             //_db.Prices.Add(price);
             //_db.SaveChanges();
-            //var response = _service.CreateInvoiceItem("cus_IEuw9XTVoO0eMW", "price_1HehEOIarr7Ydt676Dac6RCP");
+            var response = _service.CreateInvoiceItem("cus_IEuw9XTVoO0eMW", "price_1HehEOIarr7Ydt676Dac6RCP", 1);
             //var response = _service.CreateInvoice("cus_IEuw9XTVoO0eMW");
             //var amount = _service.GetCustomerBalance("cus_IEuw9XTVoO0eMW");
 

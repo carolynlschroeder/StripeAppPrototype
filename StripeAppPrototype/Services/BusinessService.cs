@@ -142,12 +142,13 @@ namespace StripeAppPrototype.Services
         }
 
 
-        public CreateInvoiceItemResponse CreateInvoiceItem(string customerId, string priceId)
+        public CreateInvoiceItemResponse CreateInvoiceItem(string customerId, string priceId, int quantity)
         {
             HttpContent content = new FormUrlEncodedContent(new[]
             {
                 new KeyValuePair<string, string>("customer", customerId),
-                new KeyValuePair<string, string>("price", priceId)
+                new KeyValuePair<string, string>("price", priceId),
+                new KeyValuePair<string, string>("quantity", quantity.ToString())
 
             });
 
